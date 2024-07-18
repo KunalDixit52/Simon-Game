@@ -1,0 +1,124 @@
+/* Basic body styling */
+body {
+    text-align: center;
+    background: url('background\ simon.jpg');
+    background-size: cover;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button container */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-gap: 2rem;
+    justify-content: center;
+}
+
+/* Basic button styling */
+.btn {
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 10px solid black;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Color classes */
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+/* Flash effect for sequence display */
+.flash {
+    animation: flash 0.5s;
+}
+
+@keyframes flash {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+/* User click effect */
+.userflash {
+    animation: userflash 0.5s;
+}
+
+@keyframes userflash {
+    0% {
+        background-color: violet;
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+/* Button hover effect */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Button active effect */
+.btn:active {
+    transform: scale(0.9);
+}
+
+/* Add a title styling */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #e9ebec;
+}
+
+/* Add a game status message styling */
+.message {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #666;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .btn {
+        height: 150px;
+        width: 150px;
+    }
+    
+    .btn-container {
+        grid-template-columns: repeat(2, 150px);
+        grid-gap: 2rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .message {
+        font-size: 1.2rem;
+    }
+}
